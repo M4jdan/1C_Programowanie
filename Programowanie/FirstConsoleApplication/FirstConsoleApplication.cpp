@@ -11,7 +11,18 @@ int main()
     std::cout << '\n';
     std::cout << 82; //stała całkowitoliczbowa 
     std::cout << -2.5; //stała rzeczywista
+    std::cout << "bruuh" << 420 << " bruuuuuuuh\n\n";
+
+
+    std::cout << "      * \n";
+    std::cout << "     *** \n";
+    std::cout << "    ***** \n";
+    std::cout << "   ******* \n";
+    std::cout << "  ********* \n";
+    std::cout << "      * \n";
 }
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
