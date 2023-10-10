@@ -62,6 +62,7 @@ void task4()
 	std::cout << "Objętość stożka wynosi: " << V << " cm3";
 
 }
+
 void task5()
 {
 	//*.Program obliczający pole koła.
@@ -153,6 +154,32 @@ void task10()
 
 
 }
+
+void task11() 
+{
+//*.Stwórz program, który pobiera od użytkownika długość w metrach i przelicza ją na centymetry i milimetry, wyświetlając wynik.
+
+	int lengthM, lengthCM, lengthMM;
+	std::cout << "Podaj długość w metrach: ";
+	std::cin >> lengthM;
+	lengthCM = lengthM * 100;
+	lengthMM = lengthCM * 10;
+	std::cout << "Długość w centymetrach wynosi: " << lengthCM << " cm, a w milimetrach wynosi: " << lengthMM << " mm.";
+
+}
+
+void task12()
+{
+	//*.Napisz program, który konwertuje wprowadzoną kwotę w jednej walucie na inną, korzystając z określonego kursu wymiany.
+	double userMoney, resultMoney;
+	std::cout << "Podaj kwotę w złotówkach: ";
+	std::cin >> userMoney;
+	resultMoney = userMoney * 0.22;
+	std::cout << "Twoja kwota w dolarach wynosi: " << resultMoney;
+
+
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
@@ -165,9 +192,9 @@ int main()
 	//task7();
 	/*task8();*/
 	/*task9();*/
-	task10();
-
-
+	/*task10();*/
+	/*task11();*/
+	task12();
 }
 
 //
