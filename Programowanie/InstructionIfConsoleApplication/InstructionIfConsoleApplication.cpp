@@ -58,8 +58,8 @@ void task3()
 *. 
 *. 
 *. 
-*. Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i wyświetli większą z nich.
-*. Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny. Wyświetl odpowiedni komunikat.
+*. 
+*. 
 *. Napisz program, który poprosi użytkownika o podanie liczby całkowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyświetl odpowiedni komunikat.
 *. Napisz program, który poprosi użytkownika o podanie masy ciała (w kilogramach) i wzrostu (w metrach).
 Na podstawie tych danych oblicz wskaźnik BMI (Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
@@ -104,7 +104,7 @@ void task7()
     std::cout << "Podaj liczbe: ";
     std::cin >> firstNumber;
 
-    if (firstNumber < 0 or firstNumber == 0)
+    if (firstNumber < 0)
     {
         int absValue = firstNumber * (-1);
         std::cout << absValue;
@@ -121,9 +121,50 @@ void task8()
     std::cout << "Podaj liczbe od 1 do 7: ";
     std::cin >> number;
     if (number >= 1 && number <= 7)
-        ;
+    {
+        if (number == 1)
+            std::cout << "Poniedziałek";
+        if (number == 2)
+            std::cout << "Wtorek";
+        if (number == 3)
+            std::cout << "Środa";
+        if (number == 4)
+            std::cout << "Czwartek";
+        if (number == 5)
+            std::cout << "Piątek";
+        if (number == 6)
+            std::cout << "Sobota";
+        if (number == 7)
+            std::cout << "Niedziela";
+    }
     else
         std::cout << "Niepoprawna liczba";
+}
+
+void task9()
+{
+    //Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i wyświetli większą z nich.
+    int firstNumber, secondNumber;
+    std::cout << "Podaj pierwsza liczbe: ";
+    std::cin >> firstNumber;
+    std::cout << "Podaj druga liczbe: ";
+    std::cin >> secondNumber;
+
+    if (firstNumber > secondNumber)
+        std::cout << firstNumber;
+    else
+        std::cout << secondNumber;
+}
+
+void task10()
+{
+    //Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny.Wyświetl odpowiedni komunikat.
+    int year, firstNumber;
+    std::cout << "Podaj rok: ";
+    std::cin >> year;
+
+   
+
 }
 
 int main()
