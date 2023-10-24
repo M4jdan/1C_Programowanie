@@ -62,9 +62,9 @@ void task3()
 *.
 *.
 *.
-*. Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
-*. Napisz program, który poprosi użytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeśli jest to możliwe. Wyświetl wynik lub odpowiedni komunikat, jeśli liczba jest ujemna.
-*. Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+*.
+*. 
+*. 
 *.
 */
 
@@ -119,25 +119,23 @@ void task8()
 	int number;
 	std::cout << "Podaj liczbe od 1 do 7: ";
 	std::cin >> number;
-	if (number >= 1 && number <= 7)
-	{
+	
 		if (number == 1)
 			std::cout << "Poniedziałek";
-		if (number == 2)
+		else if (number == 2)
 			std::cout << "Wtorek";
-		if (number == 3)
+		else if (number == 3)
 			std::cout << "Środa";
-		if (number == 4)
+		else if (number == 4)
 			std::cout << "Czwartek";
-		if (number == 5)
+		else if (number == 5)
 			std::cout << "Piątek";
-		if (number == 6)
+		else if (number == 6)
 			std::cout << "Sobota";
-		if (number == 7)
+		else if (number == 7)
 			std::cout << "Niedziela";
-	}
-	else
-		std::cout << "Niepoprawna liczba";
+		else 
+			std::cout << "NIepoprawna liczba"
 }
 
 void task9()
@@ -162,7 +160,10 @@ void task10()
 	std::cout << "Podaj rok: ";
 	std::cin >> year;
 
-
+	if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+		std::cout << "Rok jest przestępny";
+	else
+		std::cout << "rok nie jest przestępny";
 
 }
 
@@ -186,9 +187,18 @@ void task11()
 
 void task12()
 {
-	//Napisz program, który poprosi użytkownika o podanie masy ciała(w kilogramach) i wzrostu(w metrach).
-	   // Na podstawie tych danych oblicz wskaźnik BMI(Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
+	/*Napisz program, który poprosi użytkownika o podanie masy ciała(w kilogramach) i wzrostu(w metrach).
+	  Na podstawie tych danych oblicz wskaźnik BMI(Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
+	poniżej 16 - wygłodzenie
+	16 - 16.99 - wychudzenie
+	17 - 18.49 - niedowagę
+	18.5 - 24.99 - wagę prawidłową
+	25.0 - 29.9 - nadwagę
+	30.0 - 34.99 - I stopień otyłości
+	35.0 - 39.99 - II stopień otyłości
+	powyżej 40.0 - otyłość skrajną
 
+	  */
 	int weight, high;
 	std::cout << "podaj wagę (kg) : ";
 	std::cin >> weight;
@@ -198,15 +208,88 @@ void task12()
 	float bmi = weight / (high ^ 2);
 	std::cout << "Wskaźnik BMI wynosi: " << bmi;
 
+
+}
+
+void task13()
+{
+	//Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt.Wyświetl odpowiedni komunikat.
+	int firstSide, secondSide, thirdSide;
+	std::cout << " Podaj pierwszy bok: ";
+	std::cin >> firstSide;
+	std::cout << " Podaj drugi bok: ";
+	std::cin >> secondSide;
+	std::cout << " Podaj trzeci bok: ";
+	std::cin >> thirdSide;
+
+	if (firstSide == 0 || secondSide == 0 || thirdSide == 0)
+		std::cout << "Bok jest równy zero";
+	else
+		if (firstSide + secondSide > thirdSide && secondSide + thirdSide > firstSide && firstSide + thirdSide > secondSide)
+			std::cout << "Da się zrobić trójkąt";
+		else
+			std::cout << "Nie da się zrobić trójkąta";
+
+}
+
+void task14()
+{
+	//Napisz program, który poprosi użytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeśli jest to możliwe.Wyświetl wynik lub odpowiedni komunikat, jeśli liczba jest ujemna.
+	float number;
+	std::cout << "Podaj liczbe: ";
+	std::cin >> number;
+
+	if (number < 0)
+		std::cout << "Nie da się pierwiastka z ujemnej";
+	else
+	{
+		float result = sqrt(number);
+		std::cout << result;
+	}
+	
+}
+
+void task15()
+{
+	//Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+	int day, month, year;
+	std::cout << "Podaj dzień";
+	std::cin >> day;
+	std::cout << "Podaj miesiąc";
+	std::cin >> month;
+	std::cout << "Podaj rok";
+	std::cin >> year;
+
+	if (day >= 1 && day <= 31
+		&& month >= 1 && month <= 12
+		&& year != 0
+
+		&& ((month == 4 || month == 6 || month == 9 || month == 11) && day != 31)
+
+		&& month == 2 && (day >= 28
+			|| day == day == 29 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+		)
+		std::cout << "Data " << day << "," << month << "," << year << " jest poprawna";
+	else
+		std::cout << "Data nie jest poprawna";
+		
+
 }
 int main()
 {
-
+	setlocale(LC_CTYPE, "Polish");
 	//task1();
    // task2();
 	//task3();
-   /* task7();*/
-	task12();
+   // task7();
+	//task8();
+	///task9();
+	//task10();
+	///task11();
+	//task12();
+	task13();
+	//task14();
+	//task15();
 }
 
 
