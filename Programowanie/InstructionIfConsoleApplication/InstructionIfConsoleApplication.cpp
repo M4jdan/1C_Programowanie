@@ -275,6 +275,17 @@ void task15()
 		
 
 }
+
+void task16()
+{
+	
+	int number;
+	std::cout << "Podaj liczbe: ";
+	std::cin >> number;
+
+	while (number)
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
