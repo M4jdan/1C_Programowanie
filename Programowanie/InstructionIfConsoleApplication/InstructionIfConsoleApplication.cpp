@@ -283,7 +283,9 @@ void task16()
 	std::cout << "Podaj liczbe: ";
 	std::cin >> number;
 
-	while (number)
+	
+	
+
 }
 
 int main()
@@ -298,9 +300,10 @@ int main()
 	//task10();
 	///task11();
 	//task12();
-	task13();
+	//task13();
 	//task14();
 	//task15();
+	task16();
 }
 
 
