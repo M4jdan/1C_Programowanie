@@ -30,6 +30,18 @@ void task1()
 	std::cout << "Liczba dodatnia pobrana od uzytkownika " << numberFromUser << "\n";
 }
 
+void task2()
+{
+	//lotto
+	int number = rand();
+
+	do
+	{
+
+	}
+	while
+}
+
 int main()
 {
     
