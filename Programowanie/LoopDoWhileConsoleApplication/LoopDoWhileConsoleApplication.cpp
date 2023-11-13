@@ -116,6 +116,7 @@ void task5()
 
 	std::cout << "Suma " << sum << "\n";
 	//4125
+	//bruh
 }
 int main()
 {
