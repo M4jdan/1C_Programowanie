@@ -58,7 +58,7 @@ void task3()
 	unsigned long long upperRange;
 	std::cout << "Podaj góre: \n";
 	std::cin >> upperRange;
-	
+
 	unsigned long long currentNumber = 0;
 	do
 	{
@@ -118,8 +118,28 @@ void task5()
 	//4125
 	//bruh
 }
+
+void task4()
+{
+	int number, sum = 0, numberOfNumbers = 0;
+
+	do
+	{
+		std::cout << "Podaj liczbe: \n";
+		std::cin >> number;
+		sum = sum + number;
+		numberOfNumbers++;
+	} while (number != 0);
+
+	std::cout << "Suma wynosi " << sum << "\n";
+	double avg;
+	avg = sum * 1.0 / numberOfNumbers;
+	std::cout << "Średnia wynosi " << avg << "\n";
+
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
-	task3();
+	task4();
 }
