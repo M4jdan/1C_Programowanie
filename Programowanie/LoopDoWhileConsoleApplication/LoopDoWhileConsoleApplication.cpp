@@ -73,7 +73,7 @@ void task3()
 }
 
 //Napisz program, który policzy sumę cyfr podanej przez użytkownika liczby.
-void task5()
+void task4()
 {
 	int number;
 	std::cout << "Podaj liczbę\n";
@@ -119,7 +119,7 @@ void task5()
 	//bruh
 }
 
-void task4()
+void task5()
 {
 	int number, sum = 0, numberOfNumbers = 0;
 
@@ -138,8 +138,28 @@ void task4()
 
 }
 
+void task6()
+{
+	int numberFromUser, result = 0;
+	std::cout << "Podaj liczbe: \n";
+	std::cin >> numberFromUser;
+
+	do
+	{
+		numberFromUser = numberFromUser / 10;
+		
+		result++;
+		
+	} while (numberFromUser != 0);
+
+	std::cout << "Suma liczb wynosi " << result << " \n";
+
+	
+}
+
+
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
-	task4();
+	task6();
 }
