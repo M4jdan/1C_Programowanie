@@ -147,11 +147,12 @@ void task6()
 	do
 	{
 		numberFromUser = numberFromUser / 10;
-		
-		result++;
-		
-	} while (numberFromUser != 0);
 
+		result++;
+
+	} while (numberFromUser != 0);
+	
+	
 	std::cout << "Suma liczb wynosi " << result << " \n";
 
 	
