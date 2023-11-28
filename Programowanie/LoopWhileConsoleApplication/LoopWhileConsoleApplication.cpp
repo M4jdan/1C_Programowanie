@@ -49,11 +49,36 @@ void taaaaaaaaaaaaaaaaaaask2()
 	std::cout << "NWD jets równe " << nwd << "\n";
 }
 
+void task3() 
+{
+	int firstNumber, secondNumber, NWD = 1, divident = 2;
+	std::cout << "Podaj pierwszą liczbę: \n";
+	std::cin >> firstNumber;
+	std::cout << "Podaj drugą liczbę: \n";
+	std::cin >> secondNumber;
+
+	while (firstNumber >= divident
+		&& secondNumber >= divident)
+	{
+		if (firstNumber % divident == 0
+			&& secondNumber % divident == 0)
+		{
+			firstNumber = firstNumber / divident;
+			secondNumber /= divident;
+			NWD *= divident;
+		}
+		else
+			divident++;
+	}
+	std::cout << "NWD wynosi: " << NWD;
+}
+
 
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
-	taaaaaaaaaaaaaaaaaaask2();
+	//taaaaaaaaaaaaaaaaaaask2();
+	task3();
 }
 
 
