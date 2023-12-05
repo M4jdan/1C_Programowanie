@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopDoWhileConsoleApplicati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopWhileConsoleApplication", "LoopWhileConsoleApplication\LoopWhileConsoleApplication.vcxproj", "{B341C85C-F212-4C59-8DB4-C3555D94728F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopForConsoleApplication", "LoopForConsoleApplication\LoopForConsoleApplication.vcxproj", "{D7173C81-F855-4359-B451-7A29E7F1AFA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -65,6 +67,14 @@ Global
 		{B341C85C-F212-4C59-8DB4-C3555D94728F}.Release|x64.Build.0 = Release|x64
 		{B341C85C-F212-4C59-8DB4-C3555D94728F}.Release|x86.ActiveCfg = Release|Win32
 		{B341C85C-F212-4C59-8DB4-C3555D94728F}.Release|x86.Build.0 = Release|Win32
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Debug|x64.ActiveCfg = Debug|x64
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Debug|x64.Build.0 = Debug|x64
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Debug|x86.Build.0 = Debug|Win32
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Release|x64.ActiveCfg = Release|x64
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Release|x64.Build.0 = Release|x64
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Release|x86.ActiveCfg = Release|Win32
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +85,7 @@ Global
 		{3EAA1711-DADE-4137-8467-561B683A47B0} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
 		{0B7E987F-F719-4917-B744-DBBCD7D214CC} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
 		{B341C85C-F212-4C59-8DB4-C3555D94728F} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
+		{D7173C81-F855-4359-B451-7A29E7F1AFA8} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EA57345-6D61-42F3-A3D7-57A781F1872C}
