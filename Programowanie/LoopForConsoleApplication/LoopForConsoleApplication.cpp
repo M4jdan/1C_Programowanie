@@ -6,9 +6,9 @@
 
 * 
 * 
-* Program obliczający n!.
-* Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
-* Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
+
+* 
+* 
 * Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
 * Program obliczający sumę kwadratów liczb od 1 do 10
 * Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
@@ -97,9 +97,41 @@ void task5()
 
 	}
 }
+
+void task6()
+{
+	//* Program obliczający n!.
+
+	unsigned long long number, tmpNumber;
+	std::cout << "Podaj liczbe: \n";
+	std::cin >> number;
+
+	tmpNumber = number;
+	number = 1;
+	for (int i = 1; i <= tmpNumber; i++)
+	{
+		number = number * i;
+	}
+	std::cout << "WYNIK to: " << number;
+}
+
+void task7()
+{
+	//Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
+	for (int i = 1; i <= 10; i++)
+	{
+		std::cout << i << "! \n";
+	}
+}
+
+void task8()
+{
+	//Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1 = 1, 1x2 = 2, 1x3 = 3 itd.).
+
+}
 int main()
 {
-	task5();
+	task7();
 }
 
 
