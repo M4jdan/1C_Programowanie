@@ -118,7 +118,7 @@ void task6()
 void task7()
 {
 	//Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
-	for (int i = 1; i <= 10; i++)
+	for (int i = 1, number = 1; i <= 10; i++)
 	{
 		std::cout << i << "! \n";
 	}
@@ -127,7 +127,7 @@ void task7()
 void task8()
 {
 	//Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1 = 1, 1x2 = 2, 1x3 = 3 itd.).
-
+	for (int i, k; ;);
 }
 int main()
 {
