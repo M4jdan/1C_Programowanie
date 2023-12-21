@@ -4,7 +4,7 @@
 * 
 * 
 * 
-* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+* 
 * Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
 * Program wyciągający informacje z numeru PESEL
 * Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
@@ -120,10 +120,35 @@ void task8()
 
 
 }
+
+void task9()
+{
+    //Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+    std::string textFromUser;
+    std::cout << "Podaj łańcuch znaków: \n";
+    std::cin >> textFromUser;
+
+    std::string reverseText;
+    for (int i = textFromUser.length() - 1 ; i > -1 ; i--) 
+    {
+        
+        
+        if ()
+        {
+            
+        }
+        
+    }
+
+    if (isPalindrome == true)
+        std::cout << "Podany ciąg znaków jest palindromem";
+    else
+        std::cout << "Podany ciąg znaków nie jest palindromem";
+}
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task8();
+    task9();
 }
 
 
