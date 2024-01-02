@@ -5,8 +5,8 @@
 * 
 * 
 * 
-* Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
-* Program wyciągający informacje z numeru PESEL
+* 
+* 
 * Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
 * Program który na wejściu przyjmie równanie a na wyjściu da równanie w odwrotnej notacji polskiej ONP. Np. na wejściu 2+3*4 na wyjścu da 234*+
 * Program, który na wejściu przyjmie rówanie w ONP a na wyjściu wyświetli wynik rówania.
@@ -129,26 +129,50 @@ void task9()
     std::cin >> textFromUser;
 
     std::string reverseText;
-    for (int i = textFromUser.length() - 1 ; i > -1 ; i--) 
+    for (int i = textFromUser.length() - 1; i > -1 ; i--) 
     {
-        
-        
-        if ()
-        {
-            
-        }
-        
+        reverseText = reverseText + textFromUser[i];
     }
 
-    if (isPalindrome == true)
+    if (reverseText == textFromUser)
         std::cout << "Podany ciąg znaków jest palindromem";
     else
         std::cout << "Podany ciąg znaków nie jest palindromem";
 }
+
+void task10()
+{
+    //Program sprawdzający czy podane dwa słowa są anagramami(czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
+    
+    std::string firstText, secondText;
+    std::cout << "Podaj dwa łańcuchy znaków: \n";
+    std::cin >> firstText;
+    std::cin >> secondText;
+
+    for (int i = firstText.length() - 1; i > -1; i--)
+    {
+        if (                                                                                                                                                                                                                  )
+        {
+            std::cout << "text nie jest anagramem";
+            break;
+        }
+    }
+}
+
+void task11()
+{
+    //Program wyciągający informacje z numeru PESEL
+    int pesel;
+    std::cout << "Podaj numer pesel: ";
+    std::cin >> pesel;
+
+
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task9();
+    task10();
 }
 
 
