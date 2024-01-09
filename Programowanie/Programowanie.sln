@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Kolekcje", "03. Kolekcj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CharactersConsoleApplication", "CharactersConsoleApplication\CharactersConsoleApplication.vcxproj", "{A39E8759-4164-40DE-A2D3-2B53A65D03AE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayConsoleApplication", "ArrayConsoleApplication\ArrayConsoleApplication.vcxproj", "{24D38A05-CE81-4029-A542-02301FEB78A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -87,6 +89,14 @@ Global
 		{A39E8759-4164-40DE-A2D3-2B53A65D03AE}.Release|x64.Build.0 = Release|x64
 		{A39E8759-4164-40DE-A2D3-2B53A65D03AE}.Release|x86.ActiveCfg = Release|Win32
 		{A39E8759-4164-40DE-A2D3-2B53A65D03AE}.Release|x86.Build.0 = Release|Win32
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Debug|x64.ActiveCfg = Debug|x64
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Debug|x64.Build.0 = Debug|x64
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Debug|x86.ActiveCfg = Debug|Win32
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Debug|x86.Build.0 = Debug|Win32
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Release|x64.ActiveCfg = Release|x64
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Release|x64.Build.0 = Release|x64
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Release|x86.ActiveCfg = Release|Win32
+		{24D38A05-CE81-4029-A542-02301FEB78A7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +109,7 @@ Global
 		{B341C85C-F212-4C59-8DB4-C3555D94728F} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
 		{D7173C81-F855-4359-B451-7A29E7F1AFA8} = {8B168EF4-F1BF-4684-AD4C-13C6E2C29229}
 		{A39E8759-4164-40DE-A2D3-2B53A65D03AE} = {62724343-C45B-4158-AF72-0E15073B1EFB}
+		{24D38A05-CE81-4029-A542-02301FEB78A7} = {62724343-C45B-4158-AF72-0E15073B1EFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EA57345-6D61-42F3-A3D7-57A781F1872C}
