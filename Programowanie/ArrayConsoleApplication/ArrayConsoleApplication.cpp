@@ -41,6 +41,14 @@ void task2()
         std::cout << numbers[i] << ", ";
     }
     std::cout << "\n";
+
+    int sum = 0;
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        sum = sum + numbers[i];
+    }
+    double avg = sum * 1.0 / ARRAY_SIZE;
+    std::cout << "Średnia wynosi: " << avg << "\n";
 }
 
 int main()
