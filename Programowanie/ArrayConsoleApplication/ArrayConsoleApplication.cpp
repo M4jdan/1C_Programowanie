@@ -51,9 +51,38 @@ void task2()
     std::cout << "Średnia wynosi: " << avg << "\n";
 }
 
+void task3()
+{
+    //Napisz program wybierający losowe liczby w tablicy i znajduje największ. i najmniejsz.
+
+    const unsigned short LOWER_RANGE = 5;
+    const unsigned short UPPER_RANGE = 7;
+
+    const unsigned short ARRAY_SIZE = 5;
+    int numbers[ARRAY_SIZE];
+
+    srand(time(0));
+
+    std::cout << "wylosowane liczby: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        numbers[i] = rand() % (UPPER_RANGE + 1) + LOWER_RANGE;
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+
+    int sum = 0;
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        sum = sum + numbers[i];
+    }
+    double avg = sum * 1.0 / ARRAY_SIZE;
+    std::cout << "Średnia wynosi: " << avg << "\n";
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task2();
+    task3();
 }
 
