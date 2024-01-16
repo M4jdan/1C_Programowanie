@@ -70,14 +70,44 @@ void task3()
         std::cout << numbers[i] << ", ";
     }
     std::cout << "\n";
-
-    int sum = 0;
-    for (int i = 0; i < ARRAY_SIZE; i++)
+    
+    int max = numbers[0];
+    for (int i = 1; i < ARRAY_SIZE; i++)
     {
-        sum = sum + numbers[i];
+        if (numbers[i] > max)
+            max = numbers[i];
     }
-    double avg = sum * 1.0 / ARRAY_SIZE;
-    std::cout << "Średnia wynosi: " << avg << "\n";
+    std::cout << "Max to: " << max << "\n";
+
+    int min= numbers[0];
+    for (int i = 1; i < ARRAY_SIZE; i++)
+    {
+        if (numbers[i] < min)
+            min = numbers[i];
+    }
+    std::cout << "Max to: " << max << "\n";
+}
+
+void task4()
+{
+    const long long UPPER_RANGE = 70;
+
+    for (long long numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
+    {
+        bool isPrime = true;
+        for (long long i = 2; i <= numberToCheck / 2; i++)
+        {
+            if (numberToCheck % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime /* == true*/)
+            std::cout << numberToCheck << ", ";
+    }
+    std::cout << "Gotowe\n";
 }
 
 int main()
