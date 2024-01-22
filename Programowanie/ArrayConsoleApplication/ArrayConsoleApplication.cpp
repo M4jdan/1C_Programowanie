@@ -108,6 +108,45 @@ void task4()
             std::cout << numberToCheck << ", ";
     }
     std::cout << "Gotowe\n";
+
+
+    //wersja 2
+    bool sieveOfEratosthenes[UPPER_RANGE + 1];
+
+    for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+    {
+        sieveOfEratosthenes[i] = true;
+    }
+
+    for (unsigned long long number = 2; number <= UPPER_RANGE; number++)
+    {
+        if (sieveOfEratosthenes[number] /*== true*/)
+        {
+            for (long long numberToCrossOut = number + number; numberToCrossOut <= UPPER_RANGE; numberToCrossOut = numberToCrossOut + number)
+                sieveOfEratosthenes[numberToCrossOut] = false;
+        }
+    }
+
+    for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+    {
+        if (sieveOfEratosthenes[i] /*== true*/)
+            std::cout << i << ", ";
+    }
+    std::cout << "\n";
+}
+
+void task5()
+{
+    int numberOfWeek = 5;
+    std::cout << "Podaj numer dnia tygodnia\n";
+    std::cin >> numberOfWeek;
+
+    std::string dayNames[] = { "Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota","NIedziela" };
+
+    if (numberOfWeek >= 0 && numberOfWeek <= 6)
+        std::cout << dayNames[numberOfWeek];
+    else
+        std::cout << "niepoprawny wynik";
 }
 
 int main()
