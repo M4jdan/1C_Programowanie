@@ -149,9 +149,49 @@ void task5()
         std::cout << "niepoprawny wynik";
 }
 
+void task6()
+{
+    const unsigned short LOWER_RANGE = 5;
+    const unsigned short UPPER_RANGE = 7;
+
+    const unsigned short ARRAY_SIZE = 5;
+    int numbers[ARRAY_SIZE];
+
+    srand(time(0));
+
+    std::cout << "wylosowane liczbey: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        numbers[i] = rand() % (UPPER_RANGE + 1) + LOWER_RANGE;
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+    
+    for (int i = 0; i < ARRAY_SIZE - 1; i++)
+    {
+        int minIndex = i;
+        for (int j = i + 1; j < ARRAY_SIZE; j++)
+        {
+            if (numbers[j] < numbers[minIndex])
+                minIndex = j;
+        }
+
+        int tmp = numbers[minIndex];
+        numbers[minIndex] = numbers[i];
+        numbers[i] = tmp;
+    }
+
+    std::cout << "posortowanie liczby: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task3();
+    task6();
 }
 
