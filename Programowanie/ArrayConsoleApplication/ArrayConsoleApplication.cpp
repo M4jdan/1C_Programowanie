@@ -189,9 +189,51 @@ void task6()
     std::cout << "\n";
 }
 
+void task7()
+{
+    //napisz program który posortuje tablice liczb s[posobem przez wstawianie
+
+    const unsigned short LOWER_RANGE = 5;
+    const unsigned short UPPER_RANGE = 7;
+
+    const unsigned short ARRAY_SIZE = 5;
+    int numbers[ARRAY_SIZE];
+
+    srand(time(0));
+
+    std::cout << "wylosowane liczbey: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        numbers[i] = rand() % (UPPER_RANGE + 1) + LOWER_RANGE;
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+
+    //--------------------------------------------------//
+
+    for (int i = 1; i < ARRAY_SIZE; i++)
+    {
+        int pom = numbers[i];
+
+        int j;
+        for (j = i - 1; j >= 0 && numbers[j] > pom; j--)
+        {
+            numbers[j + 1] = numbers[j];
+        }
+        numbers[j + 1] = pom;
+    }
+
+    std::cout << "posortowanie liczby: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task6();
+    task7();
 }
 
