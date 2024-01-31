@@ -35,9 +35,26 @@ void task3(std::string name, int age)
         std::cout << name << "nie jest pełnoletni/a";
 }
 
+void task4(int number)
+{
+    std::cout << "Zmienna number w funkcji task4: " << number << "\n";
+    number--;
+    std::cout << "Zmienna number w funkcji task4: " << number << "\n";
+}
+
+//Napisz program który przekaże parametr przez referencje
+void task5(int &number)
+{
+    std::cout << "Zmienna number w funkcji task5: " << number << "\n";
+    number--;
+    std::cout << "Zmienna number w funkcji task5: " << number << "\n";
+}
+
+void task6(int &numberFromUser)
+
 int main()
 {
-    task1();
+    /*task1();
     task1();
     task2("Witajświecie!");
     task2("Ala ma kota !");
@@ -45,5 +62,21 @@ int main()
     task2(text);
 
     task3("Jan", 35);
-    task3("ala", 17);
-}
+    task3("ala", 17);*/
+
+    int number = 5;
+   // std::cout << "Zmienna number w funkcji main: " << number << "\n";
+    //task4(number);
+    //std::cout << "Zmienna number w funkcji main: " << number << "\n";
+
+    //task4(9);
+    const int NUMBER = 9;
+    //task4(NUMBER);
+
+    std::cout << "Zmienna number w funkcji main: " << number << "\n";
+    task5(number);
+    std::cout << "Zmienna number w funkcji main: " << number << "\n";
+
+   // task5(9); //błąd - parametr może być tylko zmienną
+    //task5(NUMBER); //błąd - parametr może być tylko zmienną
+
