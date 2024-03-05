@@ -50,7 +50,39 @@ void task5(int &number)
     std::cout << "Zmienna number w funkcji task5: " << number << "\n";
 }
 
-void task6(int &numberFromUser)
+void task6(int& numberFromUser)
+{
+}
+
+//napisz funkcję która obliczy wartość silni i ją zwróci
+long long calculateFactorial(long long n)
+{
+    long long factorial = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        factorial = factorial * i;
+    }
+    return factorial;
+}
+
+long long calculateFactorialV2(long long n)
+{
+    if (n <= 1)
+        return 1;
+    else
+        return n * calculateFactorialV2(n - 1);
+}
+
+void task7()
+{
+    int number;
+    std::cout << "Podaj liczbe: \n";
+    std::cin >> number;
+
+    long long factorial = calculateFactorialV2(number);
+
+    std::cout << "Silnia jest równa " << factorial << "\n";
+}
 
 int main()
 {
@@ -64,19 +96,20 @@ int main()
     task3("Jan", 35);
     task3("ala", 17);*/
 
-    int number = 5;
-   // std::cout << "Zmienna number w funkcji main: " << number << "\n";
+    void task7();
+    //int number = 5;
+    //std::cout << "Zmienna number w funkcji main: " << number << "\n";
     //task4(number);
     //std::cout << "Zmienna number w funkcji main: " << number << "\n";
 
     //task4(9);
-    const int NUMBER = 9;
+    //const int NUMBER = 9;
     //task4(NUMBER);
 
-    std::cout << "Zmienna number w funkcji main: " << number << "\n";
-    task5(number);
-    std::cout << "Zmienna number w funkcji main: " << number << "\n";
+    //std::cout << "Zmienna number w funkcji main: " << number << "\n";
+    //task5(number);
+    //std::cout << "Zmienna number w funkcji main: " << number << "\n";
 
-   // task5(9); //błąd - parametr może być tylko zmienną
+    //task5(9); //błąd - parametr może być tylko zmienną
     //task5(NUMBER); //błąd - parametr może być tylko zmienną
-
+}
