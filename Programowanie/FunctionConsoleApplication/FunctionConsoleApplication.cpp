@@ -96,7 +96,7 @@ int main()
     task3("Jan", 35);
     task3("ala", 17);*/
 
-    void task7();
+    task7();
     //int number = 5;
     //std::cout << "Zmienna number w funkcji main: " << number << "\n";
     //task4(number);
