@@ -204,14 +204,37 @@ void task2()
 
 #pragma region Zadanie 3
 
+void showMenu3(int &diceChoice, int &numberOfThrows)
+{
+    std::cout << "Symulator rzucania kostką \n";
+    std::cout << "------------------------- \n";
+    std::cout << "Wybierz rodzaj kostki (6/10/20): ";
+    std::cin >> diceChoice;
+    std::cout << "Ile rzutów chcesz wykonać?: ";
+    std::cin >> numberOfThrows;
+}
+
 void task3()
 {
+    int diceChoice, numberOfThrows;
+    showMenu3(diceChoice, numberOfThrows);
+    
+   
 
+    /* srand(time(0));
+
+    std::cout << "wylosowane liczby: \n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        numbers[i] = rand() % (UPPER_RANGE + 1);
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";*/
 }
 
 #pragma endregion To jest zadanie 3
 
 int main()
 {
-    task2();
+    task3();
 }
