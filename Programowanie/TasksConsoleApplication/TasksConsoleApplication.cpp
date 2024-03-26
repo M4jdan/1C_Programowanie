@@ -139,7 +139,6 @@ void task1()
 
 #pragma endregion To jest zadanie 1
 
-
 #pragma region Zadanie 2
 
 void recalculation(char choice)
@@ -204,6 +203,15 @@ void task2()
 
 #pragma region Zadanie 3
 
+void throwNumbers(int diceChoice, int throws)
+{
+    int randomNumber;
+
+    randomNumber = rand() % diceChoice + 1;
+    
+    std::cout << throws << ". Rzut " << throws << ": " << randomNumber << "\n";
+}
+
 void showMenu3(int &diceChoice, int &numberOfThrows)
 {
     std::cout << "Symulator rzucania kostką \n";
@@ -216,20 +224,15 @@ void showMenu3(int &diceChoice, int &numberOfThrows)
 
 void task3()
 {
+    srand(time(0));
     int diceChoice, numberOfThrows;
     showMenu3(diceChoice, numberOfThrows);
-    
-   
 
-    /* srand(time(0));
-
-    std::cout << "wylosowane liczby: \n";
-    for (int i = 0; i < ARRAY_SIZE; i++)
+    for (int throws = 1; throws <= numberOfThrows; throws++)
     {
-        numbers[i] = rand() % (UPPER_RANGE + 1);
-        std::cout << numbers[i] << ", ";
+        throwNumbers(diceChoice, throws);
     }
-    std::cout << "\n";*/
+   
 }
 
 #pragma endregion To jest zadanie 3
