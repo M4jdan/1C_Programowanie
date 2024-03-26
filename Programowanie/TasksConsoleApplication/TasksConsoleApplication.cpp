@@ -131,7 +131,7 @@ void task1()
         calculate(numberOfOperation);
     }
 
-        
+    
 
 
    
