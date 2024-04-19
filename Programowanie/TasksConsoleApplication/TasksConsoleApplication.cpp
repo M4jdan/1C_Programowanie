@@ -1,4 +1,7 @@
 ﻿#include <iostream>
+#include <windows.h>
+#include <conio.h>
+
 
 /*
 Zadanie 1: Tworzenie prostego kalkulatora
@@ -237,7 +240,70 @@ void task3()
 
 #pragma endregion To jest zadanie 3
 
+
+
+#pragma region Zadanie
+
+void deleteStar(int x, int y)
+{
+    COORD c;
+    c.X = x;
+    c.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+
+    std::cout << "";
+}
+void showConsoleCursor(bool showFlag)
+{
+    HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    CONSOLE_CURSOR_INFO     cursorInfo;
+
+    GetConsoleCursorInfo(out, &cursorInfo);
+    cursorInfo.bVisible = showFlag; // set the cursor visibility
+    SetConsoleCursorInfo(out, &cursorInfo);
+}
+
+void getConsolResolution(int& consoleWidth, int& consoleHeight)
+{
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+
+    consoleWidth = csbi.srWindow.Right - csbi.srWindow.Left;
+    consoleHeight = csbi.srWindow.Bottom - csbi.srWindow.Top;
+}
+
+void setRandomStar(int x, int y)
+{
+    COORD c;
+    c.X = x;
+    c.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
+
+    std::cout << "*";
+
+}
+void task()
+{
+    srand(time(0));
+    int x, y;
+    int consoleHeight, consoleWidth;
+    getConsolResolution(consoleWidth, consoleHeight);
+
+    while (true)
+    {
+        showConsoleCursor(false);
+        Sleep(800);
+
+        x = rand() % consoleWidth;
+        y = rand() % consoleHeight;
+        setRandomStar(x, y);
+
+        deleteStar(x, y);
+    }
+}
+#pragma endregion Zadanie z gwiazdkami
 int main()
 {
-    task3();
+    task();
 }
