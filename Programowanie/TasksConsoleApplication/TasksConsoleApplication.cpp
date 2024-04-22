@@ -251,7 +251,9 @@ void deleteStar(int x, int y)
     c.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 
+    Sleep(800);
     std::cout << "";
+    system("cls");
 }
 void showConsoleCursor(bool showFlag)
 {
