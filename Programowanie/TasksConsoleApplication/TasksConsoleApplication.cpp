@@ -12,7 +12,7 @@ Instrukcje:
 Poproś użytkownika o podanie dwóch liczb oraz wybór operacji (dodawanie, odejmowanie, mnożenie lub dzielenie).
 W zależności od wyboru użytkownika, wykonaj odpowiednią operację arytmetyczną.
 Wyświetl wynik operacji.
-Przykładowe działanie programu:
+Przykładowe działanie programu: fdsghjsd
 Prosty Kalkulator
 -----------------
 1. Dodawanie
