@@ -1,6 +1,6 @@
 #include <iostream>
 
-//Napissz program który obliczy odleg³oœc punktu 2d od innego punktu 
+//Napissz program który obliczy odleg³oœc punktu 2d od innego punktu swd
 
 struct point
 {
