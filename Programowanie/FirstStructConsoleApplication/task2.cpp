@@ -2,15 +2,27 @@
 
 //Napissz program który obliczy odleg³oœc punktu 2d od innego punktu 
 
-void Task1()
+struct point
 {
-	double x, y;
+	double x;
+	double y;
+};
+void getPointValue(point &p)
+{
 	std::cout << "Podaj x\n";
-	std::cin >> x;
+	std::cin >> p.x;
 
 	std::cout << "Podaj y\n";
-	std::cin >> y;
+	std::cin >> p.y;
+}
 
-	double distance = sqrt(x * x + y * y);
+void Task2()
+{
+	point firstPoint;
+
+	getPointValue(firstPoint);
+
+	double distance = sqrt(firstPoint.x * firstPoint.x + firstPoint.y * firstPoint.y);
 
 	std::cout << "Odleg³oœc to : " << distance << "\n";
+}
