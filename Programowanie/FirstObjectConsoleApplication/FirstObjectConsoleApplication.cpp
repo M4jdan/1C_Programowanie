@@ -1,20 +1,22 @@
+
 #include <iostream>
 
-struct BankAccount
+class BankAccount
 {
+public:
 	double balance;
 	std::string owner;
 	std::string currency;
 };
 
-void accountInformation(BankAccount& account)
+void accountInformation(BankAccount &account)
 {
 	std::cout << "Informacje o koncie bankowym \n";
 	std::cout << "W³aœciciel: " << account.owner << "\n";
 	std::cout << "Saldo: " << account.balance << " " << account.currency << "\n";
 }
 
-void task4()
+int main()
 {
 	BankAccount firstAccount;
 	firstAccount.balance = 7200;
