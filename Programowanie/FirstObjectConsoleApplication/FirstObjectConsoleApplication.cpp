@@ -7,14 +7,16 @@ public:
 	double balance;
 	std::string owner;
 	std::string currency;
+
+	void AccountInformation()
+	{
+		std::cout << "Informacje o koncie bankowym \n";
+		std::cout << "W³aœciciel: " << owner << "\n";
+		std::cout << "Saldo: " << balance << " " << currency << "\n";
+	}
 };
 
-void accountInformation(BankAccount &account)
-{
-	std::cout << "Informacje o koncie bankowym \n";
-	std::cout << "W³aœciciel: " << account.owner << "\n";
-	std::cout << "Saldo: " << account.balance << " " << account.currency << "\n";
-}
+
 
 int main()
 {
@@ -23,12 +25,12 @@ int main()
 	firstAccount.owner = "Jan Kowalski";
 	firstAccount.currency = "z³";
 
-	accountInformation(firstAccount);
+	firstAccount.AccountInformation();
 
 	BankAccount secondAccount;
 	secondAccount.balance = 3200;
 	secondAccount.owner = "Ewa Nowak";
 	secondAccount.currency = "z³";
 
-	accountInformation(secondAccount);
+	secondAccount.AccountInformation();
 }
