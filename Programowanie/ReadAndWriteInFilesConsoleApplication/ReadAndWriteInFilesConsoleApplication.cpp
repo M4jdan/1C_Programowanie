@@ -39,7 +39,7 @@ void task2()
         std::string name;
         int age;
 
-        while (readFromFile >> name;)
+        while (readFromFile >> name)
         {
             
             readFromFile >> age;
