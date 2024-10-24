@@ -3,10 +3,10 @@
 
 class BankAccount
 {
-public:
+private:
 	double balance;
 	std::string owner;
 	std::string currency;
-	
+public:	
 	void AccountInformation();
 };
