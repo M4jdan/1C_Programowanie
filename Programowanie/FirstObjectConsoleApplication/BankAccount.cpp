@@ -1,5 +1,15 @@
 #include <iostream>
 #include "BankAccount.h"
+void BankAccount::SetBalance(double b)
+{
+	if (b >= 0)
+		balance = b;
+}
+
+double BankAccount::GetBalance()
+{
+	return balance;
+}
 
 void BankAccount::AccountInformation()
 {

@@ -6,7 +6,7 @@
 int main()
 {
 	BankAccount firstAccount;
-	firstAccount.balance = 7200;
+	firstAccount.SetBalance(7200);
 	firstAccount.owner = "Jan Kowalski";
 	firstAccount.currency = "z³";
 
