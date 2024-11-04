@@ -9,6 +9,7 @@ int main()
 	/*firstAccount.SetBalance(7200);
 	firstAccount.owner = "Jan Kowalski";
 	firstAccount.currency = "z³";*/
+	//dasghdfjhsdgfjh
 
 	firstAccount.AccountInformation();
 
