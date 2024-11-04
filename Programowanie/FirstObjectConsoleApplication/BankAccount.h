@@ -12,6 +12,8 @@ private:
 
 	void SetBalance(double b);
 public:	
+	BankAccount();
+	BankAccount(double b, std::string o, std::string c);
 	
 	double GetBalance();
 	void AccountInformation();
