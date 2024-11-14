@@ -5,7 +5,7 @@
 
 int main()
 {
-    std::cout << "Hello World!\n"; //stała łańcuchowa 
+    std::cout << "👌🤛!\n"; //stała łańcuchowa 
     std::cout << "Szymon Majdański bruhh\n";
     std::cout << 'x'; //stała znakowa
     std::cout << '\n';

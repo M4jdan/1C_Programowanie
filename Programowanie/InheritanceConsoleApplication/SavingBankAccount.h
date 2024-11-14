@@ -3,9 +3,21 @@
 
 class SavingBankAccount : public BankAccount
 {
-private:
+protected:
 	double interestRate;
 public:
+	SavingBankAccount()
+	{
+		interestRate = 0.1;
+	}
 
-	void 
+	SavingBankAccount(double b, std::string o, std::string c, double ir) : BankAccount(b, o, c)
+	{
+		interestRate = ir;
+	}
+
+	void CalculateInterestRate()
+	{
+		balance = balance + balance * interestRate;
+	}
 };
