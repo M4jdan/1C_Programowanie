@@ -4,7 +4,10 @@
 
 int main()
 {
-	SavingBankAccount savingBankAccount;
-	savingBankAccount.AccountInformation();
+	SavingBankAccount savingBankAccount(100, "ewa Nowak", "z³", 0.12);
+	//savingBankAccount.AccountInformation();
+
+
+
 }
 
