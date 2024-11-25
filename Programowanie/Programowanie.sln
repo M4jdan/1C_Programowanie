@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringConsoleApplication", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InheritanceConsoleApplication", "InheritanceConsoleApplication\InheritanceConsoleApplication.vcxproj", "{E1FB3A37-995D-4825-8A4E-B40FB1266ADF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FiguresConsoleApplication", "FiguresConsoleApplication\FiguresConsoleApplication.vcxproj", "{B1F0BD9A-E989-44BC-93A5-E88B609C0030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -201,6 +203,14 @@ Global
 		{E1FB3A37-995D-4825-8A4E-B40FB1266ADF}.Release|x64.Build.0 = Release|x64
 		{E1FB3A37-995D-4825-8A4E-B40FB1266ADF}.Release|x86.ActiveCfg = Release|Win32
 		{E1FB3A37-995D-4825-8A4E-B40FB1266ADF}.Release|x86.Build.0 = Release|Win32
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Debug|x64.ActiveCfg = Debug|x64
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Debug|x64.Build.0 = Debug|x64
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Debug|x86.ActiveCfg = Debug|Win32
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Debug|x86.Build.0 = Debug|Win32
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Release|x64.ActiveCfg = Release|x64
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Release|x64.Build.0 = Release|x64
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Release|x86.ActiveCfg = Release|Win32
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +241,7 @@ Global
 		{9DB78DCA-7A7E-4873-9872-53A24739A828} = {10AFD045-2C03-4B9B-B273-EA69F3F71C2A}
 		{CCF67573-A3DE-438D-83AC-FD2759A64F28} = {10AFD045-2C03-4B9B-B273-EA69F3F71C2A}
 		{E1FB3A37-995D-4825-8A4E-B40FB1266ADF} = {10AFD045-2C03-4B9B-B273-EA69F3F71C2A}
+		{B1F0BD9A-E989-44BC-93A5-E88B609C0030} = {10AFD045-2C03-4B9B-B273-EA69F3F71C2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EA57345-6D61-42F3-A3D7-57A781F1872C}
