@@ -5,7 +5,7 @@
 
 int main()
 {
-    std::ifstream file("liczby.txt");
+    std::ifstream file("przyklad.txt");
 
     /*
     for (int i = 0; i < 200; i++)
@@ -25,12 +25,13 @@ int main()
     int num;
     while (file >> num)
         numbers.push_back(num);
-
+    /*
     for (int num : numbers)
     {
         std::cout << num << ", ";
     }
-
+    */
+    /*
     int count = 0;
     for (int num : numbers)
     {
@@ -42,6 +43,30 @@ int main()
             count++;
         }
     }
+    */
+    
+    int theHighestNumber, theHighestCount = 0;
+    int count = 0;
+    int prime_Factor = 2;
+
+    for (int num : numbers)
+    {
+        int tmpNumber = num;
+        do {
+            
+
+
+            count++;
+        } while (tmpNumber > 1);
+
+        if (count > theHighestCount)
+        {
+            theHighestNumber = tmpNumber;
+            theHighestCount = count;
+        }
+    }
+    std::cout << "OdpowiedŸ to: " << theHighestNumber << ", " << theHighestCount;
+
 
 }
 
