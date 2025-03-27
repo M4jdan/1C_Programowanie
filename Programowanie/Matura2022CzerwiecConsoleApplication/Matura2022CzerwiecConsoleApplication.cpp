@@ -25,9 +25,10 @@ int main()
 
 		} while (num > 1);
 
-		for (int i = 0; i < digits.size(); i++)
+		for (int i = digits.size(); i >= 0 ; i--)
 		{
-			reflected_number += digits[i] * pow(10, i);
+			reflected_number += digits.begin() * pow(10, i);
+			digits.erase(digits.begin());
 		}
 
 		if (reflected_number % 17 == 0)
