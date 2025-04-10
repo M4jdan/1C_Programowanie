@@ -15,7 +15,7 @@ int reflectNumber(int n)
 		n = n / 10;
 
 	} while (n >= 1);
-	
+
 	for (int i = digits.size(); i > 0; i--)
 	{
 		r_n = r_n * 10 + *digits.begin();
@@ -26,20 +26,32 @@ int reflectNumber(int n)
 	return r_n;
 }
 
+bool ifPrimeNumber(int n)
+{
+	if (n < 2)
+		return false;
+	for (int i = 2; i * i <= n; i++)
+	{
+		if (n % i == 0)
+			return false;
+	}
+	return true;
+}
+
 int main()
 {
 	std::ifstream file("przyklad.txt");
 
 	std::vector<int> numbers;
 
-	
+
 
 	int num;
 	while (file >> num)
 		numbers.push_back(num);
 
 	std::cout << "Zad 4.1 \n";
-	
+
 	for (int num : numbers)
 	{
 		reflected_number = reflectNumber(num);
@@ -53,21 +65,47 @@ int main()
 
 	int n = 0;
 	int difference;
+	int max_difference = 0;
 
 	for (int num : numbers)
 	{
 		reflected_number = reflectNumber(num);
 
 		difference = num - reflected_number;
-		
+
 		if (difference < 0)
 			difference = difference * -1;
 
-		if (num > n)
-			n = num;
+		if (difference > max_difference)
+		{
+			if (num > n)
+			{
+				n = num;
+				max_difference = difference;
+			}
+		}
 
 	}
 	std::cout << n << "\n";
-	std::cout << difference;
+	std::cout << max_difference << "\n";
+
+	std::cout << "Zad 4.3 \n";
+
+	for (int num : numbers)
+	{
+		if ( ifPrimeNumber(num) )
+		{
+			reflected_number = reflectNumber(num);
+			if (ifPrimeNumber(reflected_number))
+				std::cout << reflected_number << "\n";
+		}
+	}
+
+	std::cout << "Zad 4.4 \n";
+
+	for (num : numbers)
+	{
+
+	}
 }
 
