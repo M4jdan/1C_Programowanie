@@ -40,7 +40,7 @@ bool ifPrimeNumber(int n)
 
 int main()
 {
-	std::ifstream file("przyklad.txt");
+	std::ifstream file("liczby.txt");
 
 	std::vector<int> numbers;
 
@@ -50,6 +50,7 @@ int main()
 	while (file >> num)
 		numbers.push_back(num);
 
+	
 	std::cout << "Zad 4.1 \n";
 
 	for (int num : numbers)
@@ -61,6 +62,7 @@ int main()
 
 	}
 
+	
 	std::cout << "Zad 4.2 \n";
 
 	int n = 0;
@@ -89,6 +91,7 @@ int main()
 	std::cout << n << "\n";
 	std::cout << max_difference << "\n";
 
+	
 	std::cout << "Zad 4.3 \n";
 
 	for (int num : numbers)
@@ -101,9 +104,10 @@ int main()
 		}
 	}
 
+	
 	std::cout << "Zad 4.4 \n";
 
-	for (num : numbers)
+	for ( int num : numbers)
 	{
 
 	}
