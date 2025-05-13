@@ -13,12 +13,26 @@ int ifOddAbbreviation(int n)
 		if (digit % 2 != 0)
 		{
 			m = m + (digit * pow(10, index));
+			index++;
 		}
+
+		
+		n /= 10;
 	} while(n != 0);
 	
 	return m;
-	
-	return 0;
+}
+
+int theGreatestCommonDivisor(int num, int second_num)
+{
+	do
+	{
+		int tmp = second_num;
+		second_num = num % second_num;
+		num = tmp;
+	} while (second_num != 0);
+
+	return num;
 }
 
 int odd_num_abbreviation;
@@ -69,11 +83,12 @@ int main()
 		odd_num_abbreviation = ifOddAbbreviation(num);
 		if (odd_num_abbreviation != 0)
 		{
-
+			if (theGreatestCommonDivisor(num, odd_num_abbreviation) == 7)
+				std::cout << num << "\n";
 		}
 
 	}
-
+	
 	
 
 }
