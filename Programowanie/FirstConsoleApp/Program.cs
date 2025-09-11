@@ -20,6 +20,7 @@ secondNumber++;
 Console.WriteLine($"Pierwsza liczba to {firstNumber}");
 Console.WriteLine($"Druga to {secondNumber}"); 
 
+//przekazywanie wartości
 void Parametr_v1(int p)
 {
     Console.WriteLine($"parametr 1 {p}");
@@ -30,4 +31,17 @@ void Parametr_v1(int p)
 firstNumber = 15;
 Console.WriteLine($"firstNumber przed {firstNumber}");
 Parametr_v1(firstNumber);
+Console.WriteLine($"firstNumber po {firstNumber}");
+
+//przekazywanie referencji
+void Parametr_v2(ref int p)
+{
+    Console.WriteLine($"parametr 2 {p}");
+    p++;
+    Console.WriteLine($"Parametr 2 {p}");
+}
+
+firstNumber = 15;
+Console.WriteLine($"firstNumber przed {firstNumber}");
+Parametr_v2(ref firstNumber);
 Console.WriteLine($"firstNumber po {firstNumber}");
