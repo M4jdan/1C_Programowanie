@@ -5,7 +5,7 @@
     <ProjectGuid>0b380339-c31a-4cd9-94f0-812a4f3384ec</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>calculator_gui.py</StartupFile>
+    <StartupFile>rock_paper_scissors_gui.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
