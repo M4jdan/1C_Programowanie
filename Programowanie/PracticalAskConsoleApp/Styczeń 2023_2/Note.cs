@@ -20,7 +20,7 @@ namespace PracticalAskConsoleApp.Styczeń_2023_1
                 notes_content - treść notatki
      ****************************************************
      */
-    internal class Notatka
+    internal class Note
     {
         static private int notes_count = 0;
         private int note_id;
@@ -28,7 +28,7 @@ namespace PracticalAskConsoleApp.Styczeń_2023_1
         protected string note_title;
         protected string note_content;
 
-        public Notatka(string title, string content)
+        public Note(string title, string content)
         {
 
             notes_count += 1;
@@ -39,13 +39,13 @@ namespace PracticalAskConsoleApp.Styczeń_2023_1
 
         }
 
-        public void viewNote()
+        public void ViewNote()
         {
             Console.WriteLine($"Tytuł: {note_title} \n");
             Console.WriteLine($"Treść: {note_content} \n");
         }
 
-        public void diagnose()
+        public void Diagnose()
         {
             Console.WriteLine($"Liczba utworzonych notatek : {notes_count}; Numer ID: {note_id}; Tytuł: {note_title}; Treść: {note_content} \n");
         }
