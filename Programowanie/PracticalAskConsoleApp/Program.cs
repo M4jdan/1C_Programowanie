@@ -10,7 +10,8 @@ task1.task();
 
 */
 
-//Styczeń 2023_2
+
+//Styczeń 2023_2 klasa notatka
 
 /*
 Note notatka1 = new Note("zakupy", "masło szynka ser bułki");
@@ -25,7 +26,8 @@ notatka1.Diagnose();
 
 */
 
-//Czerwiec 2022 
+
+//Czerwiec 2022 klasa osoba 
 
 /*
 Person person = new Person(5, "Ktoś");
@@ -36,4 +38,12 @@ person.WriteName("cos");
 
 */
 
-//
+
+//Czerwiec 2023 klasa filmów
+
+/**/
+
+
+//Styczeń 2025 klasy urządzeń domowych
+
+/**/
