@@ -1,4 +1,5 @@
 ﻿using PracticalAskConsoleApp.Czerwiec_2022;
+using PracticalAskConsoleApp.Czerwiec_2023;
 using PracticalAskConsoleApp.Styczeń_2023_1;
 
 
@@ -41,7 +42,17 @@ person.WriteName("cos");
 
 //Czerwiec 2023 klasa filmów
 
-/**/
+Film film = new Film();
+film.setTitle("REPO");
+film.getTitle(film);
+film.getNumberOfLoans(film);
+film.increment();
+
+Film film2 = new Film();
+film.setTitle("Cos");
+film.getTitle(film);
+film.getNumberOfLoans(film);
+film.increment();
 
 
 //Styczeń 2025 klasy urządzeń domowych
