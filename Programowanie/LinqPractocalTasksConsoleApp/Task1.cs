@@ -66,7 +66,7 @@ namespace LinqPractocalTasksConsoleApp
             // Zadanie 1
             var q1 = people.Where(p => p.City == "Kraków");
             Print("Zadanie 1", q1);
-
+            
             // zadanie 2
 
             var q2 = people.Where(p => p.Age >= 18);
