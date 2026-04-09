@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -179,6 +180,41 @@ namespace LinqPractocalTasksConsoleApp
             28. Znajdź osobę o najmniejszej pensji.
             29. Wypisz osoby, które mają taki sam wiek jak najstarsza osoba.
              */
+            
+            /*
+            // zad 22
+            var q22 = people.Where(p => p.Skills.Contains("C#"));
+            Print("zad 22", q22);
+
+            // zad 23
+            var q23 = people.Where(p => p.Skills.Count() >= 3);
+            Print("zad 23", q23);
+
+            // zad 24
+            var q24 = people.Select(p => new BoxOfFirstLastNameAgeAndSalary() {FirstName = p.FirstName, LastName = p.LastName, Age = p.Age, Salary = p.Salary, City = p.City}).Where(p => p.City == "Warszawa").OrderByDescending(p => p.Age);
+            Print("zad 24", q24);
+
+            // zad 25
+            var q25 = people.Any(p => p.Skills.Contains("Azure"));
+            Console.Write($"\n=== zad 25 ===  \n{q25}\n");
+
+            // zad 26
+            var q26 = people.All(p => p.Salary >= 4000);
+            Console.Write($"\n=== zad 26 ===  \n{q26}\n");
+
+            //zad 27
+            var q27 = people.OrderByDescending(p => p.Salary).First();
+            Console.Write($"\n=== zad 27 ===  \n{q27}\n");
+
+            //zad 28
+            var q28 = people.OrderByDescending(p => p.Salary).Last();
+            Console.Write($"\n=== zad 28 ===  \n{q28}\n");
+
+            //zad 29
+            var max_age = people.Max(p => p.Age);
+            var q29 = people.Where(p => p.Age ==  max_age);
+            Print("zad 29", q29);
+            */
 
 
         }
@@ -192,6 +228,22 @@ namespace LinqPractocalTasksConsoleApp
             public override string ToString()
                 => $"{FirstName}, {LastName}";
 
+
+        }
+
+        class  BoxOfFirstLastNameAgeAndSalary
+        {
+            public string FirstName { get; init; }
+           public string LastName { get; init; }
+
+           public int Age { get; init; }
+
+           public decimal Salary { get; init; }
+
+            public string City { get; init; }
+
+            public override string ToString()
+                => $"{FirstName}, {LastName}, {Age}, {Salary}";
 
         }
 
