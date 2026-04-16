@@ -12,25 +12,10 @@ namespace LinqPractocalTasksConsoleApp;
 ==      (zadania całkowicie nowe)     ==
 ========================================
 
-POZIOM 1 – PODSTAWOWY
-1. Wypisz wszystkie zamówienia o statusie „New”.
-2. Sprawdź, czy istnieje zamówienie na produkt “Laptop”.
-3. Wypisz zamówienia z ostatnich 30 dni.
 
-POZIOM 2 – ŚREDNI
-4. Wygeneruj listę tekstów w formacie: "Klient ? wartość zamówienia".
-5. Znajdź zamówienia, w których nazwa produktu zawiera literę „o”.
-6. Znajdź zamówienia mające wartość większą niż 1000 i status inny niż „Cancelled”.
-7. Sprawdź, czy wszystkie zamówienia pochodzą z bieżącego roku.
 
-POZIOM 3 – ZAAWANSOWANY
-8. Znajdź zamówienia, gdzie klient zamówił więcej niż jeden różny produkt (czyli klient pojawia się więcej niż raz z różnymi produktami).
-9. Wypisz klientów wraz z liczbą dni, które minęły od ich najstarszego zamówienia.
-10. Wypisz wszystkie unikalne pary (Klient, Produkt).
-11. Znajdź klientów, którzy mają co najmniej jedno zamówienie w statusie „Cancelled” ORAZ co najmniej jedno w statusie „Delivered”.
-12. Wypisz zamówienia, których wartość mieści się pomiędzy 1000 a 3000 zł i zostały złożone w ciągu ostatnich 14 dni.
-13. Znajdź klientów, którzy zamawiali ten sam produkt w różnych terminach.
-14. Znajdź zamówienia, w których cena jednostkowa produktu jest wyższa niż łączna wartość jakiegokolwiek innego zamówienia.
+
+
 */
 
 internal class Task2
@@ -76,5 +61,65 @@ internal class Task2
             new() { Id = 15, Customer="Kasia", Product="Drukarka",  Quantity=1, PricePerItem=700m,  OrderDate=DateTime.Today.AddDays(-1),  Status=OrderStatus.New },
             new() { Id = 16, Customer="Kasia", Product="Laptop",    Quantity=1, PricePerItem=4300m, OrderDate=DateTime.Today.AddDays(-28), Status=OrderStatus.Delivered }
         };
+
+        /*
+         POZIOM 1 – PODSTAWOWY
+        1. Wypisz wszystkie zamówienia o statusie „New”.
+        2. Sprawdź, czy istnieje zamówienie na produkt “Laptop”.
+        3. Wypisz zamówienia z ostatnich 30 dni.
+        */
+
+        /*
+        var q1 = orders.Where(o => o.Status == OrderStatus.New);
+        Print("zad 1", q1);
+
+        var q2 = orders.Any(o => o.Product == "Laptop");
+        Console.Write($"\n=== zad 2 ===  \n{q2}\n");
+
+        var q3 = orders.Where(o => o.OrderDate >= DateTime.Today.AddDays(-30));
+        Print("zad 3", q3);
+
+        */
+
+        /*
+         POZIOM 2 – ŚREDNI
+        4. Wygeneruj listę tekstów w formacie: "Klient ? wartość zamówienia".
+        5. Znajdź zamówienia, w których nazwa produktu zawiera literę „o”.
+        6. Znajdź zamówienia mające wartość większą niż 1000 i status inny niż „Cancelled”.
+        7. Sprawdź, czy wszystkie zamówienia pochodzą z bieżącego roku.*/
+
+        /*
+        var q4 = orders.Select(o => $"Klient {o.Customer} {o.Quantity * o.PricePerItem}");
+        Print("zad 4", q4);
+
+        var q5 = orders.Where(o => o.Product.Contains("o"));
+        Print("zad 5", q5);
+
+        var q6 = orders.Where(o => o.Quantity * o.PricePerItem > 1000 && o.Status != OrderStatus.Cancelled);
+        Print("zad 6", q6);
+
+        var q7 = orders.All(o => o.OrderDate.Year == DateTime.Now.Year);
+        Console.Write($"\n=== zad 7 ===  \n{q7}\n");
+        */
+
+        /*
+         POZIOM 3 – ZAAWANSOWANY
+        8. Znajdź zamówienia, gdzie klient zamówił więcej niż jeden różny produkt (czyli klient pojawia się więcej niż raz z różnymi produktami).
+        9. Wypisz klientów wraz z liczbą dni, które minęły od ich najstarszego zamówienia.
+        10. Wypisz wszystkie unikalne pary (Klient, Produkt).
+        11. Znajdź klientów, którzy mają co najmniej jedno zamówienie w statusie „Cancelled” ORAZ co najmniej jedno w statusie „Delivered”.
+        12. Wypisz zamówienia, których wartość mieści się pomiędzy 1000 a 3000 zł i zostały złożone w ciągu ostatnich 14 dni.
+        13. Znajdź klientów, którzy zamawiali ten sam produkt w różnych terminach.
+        14. Znajdź zamówienia, w których cena jednostkowa produktu jest wyższa niż łączna wartość jakiegokolwiek innego zamówienia.
+        */
+
+        var q8 
+        
     }
+
+
 }
+
+
+
+
