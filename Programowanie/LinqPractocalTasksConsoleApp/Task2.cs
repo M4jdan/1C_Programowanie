@@ -113,8 +113,39 @@ internal class Task2
         14. Znajdź zamówienia, w których cena jednostkowa produktu jest wyższa niż łączna wartość jakiegokolwiek innego zamówienia.
         */
 
-        var q8 
+        /*
+        var q8 = orders.Where(o => orders.Where(oo => oo.Customer == o.Customer).DistinctBy(c => c.Product).Count() > 1).Distinct();
+        Print($"Zadanie 8", q8);
         
+        var q9 = orders.Select(o => new { Customer = o.Customer, OrderDate = o.OrderDate }).OrderBy(o => o.OrderDate).DistinctBy(o => o.Customer);
+        Print($"Zadanie 9", "");
+        foreach (var o in q9)
+            Console.WriteLine(o.Customer + " " + (DateTime.Now - o.OrderDate).Days);
+        
+        var q10 = orders.Select(o => new { Customer = o.Customer, Product = o.Product }).Distinct();
+        Print($"Zadanie 10", "");
+        
+        foreach (var o in q10)
+            Console.WriteLine(o.Customer + " " + o.Product);
+        
+        var q11 = orders.Where(o => orders.Where(oo => o.Customer == oo.Customer && oo.Status == OrderStatus.Cancelled).Count() > 0
+        && orders.Where(oo => o.Customer == oo.Customer && oo.Status == OrderStatus.Delivered).Count() > 0);
+        Print($"Zadanie 11", q11);
+        
+        var q12 = orders.Where(o => o.Total > 1000 && o.Total < 3000 && o.OrderDate >= DateTime.Now.AddDays(-14) && o.OrderDate <= DateTime.Now);
+        Print($"Zadanie 12", q12);
+        
+        var q13 = orders.FindAll(o => orders
+        .Where(oo => o.Product == oo.Product && o.Customer == oo.Customer && oo.OrderDate != o.OrderDate).Count() > 0)
+            .DistinctBy(o => o.Customer).Select(o => $"Klienci {o.Customer}");
+        
+        Print($"Zadanie 13", q13);
+
+        
+        var q14 = orders.Where(o => orders.Find(oo => o.PricePerItem > oo.Total) != null);
+        Print("zadania 14", q14);
+        */
+
     }
 
 
