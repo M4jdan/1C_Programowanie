@@ -1,6 +1,4 @@
-﻿using Android.Util;
-
-namespace SimpleCalculatorMauiApp
+﻿namespace SimpleBindingCalculatorMauiApp
 {
     public partial class MainPage : ContentPage
     {
@@ -9,32 +7,34 @@ namespace SimpleCalculatorMauiApp
             InitializeComponent();
         }
 
-        public int firstNumber
+        public string FirstNumber { get; set; }
+        public string SecondNumber { get; set; }
+
+        private string result;
+        public string Result
         {
-            get { return firstNumber }
+            get { return result; }
+            set
+            {
+                result = value;
+                OnPropertyChanged();
+            }
         }
 
 
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            /*//pobrać dane wejściowe
-            //var firstNumber = int.Parse(firstNumberEntry.Text);
-            //int firstNumber;
-            if (int.TryParse(firstNumberEntry.Text, out int firstNumber)
-                && int.TryParse(secondNumberEntry.Text, out int secondNumber))
+            if (int.TryParse(FirstNumber, out int firstNumber)
+                && int.TryParse(SecondNumber, out int secondNumber))
             {
-                //wykonać operację dodawania
-                //wyświetlić wynik
-                resultLabel.Text = $"Wynik dodawania to {firstNumber + secondNumber}";
-                resultLabel.BackgroundColor = Colors.Green;
+                Result = $"{firstNumber + secondNumber}";
             }
             else
             {
-                resultLabel.Text = $"Podałeś nieprawidłowe dane.";
-                resultLabel.BackgroundColor = Colors.Red;
+                Result = $"Podałeś nieprawidłowe dane.";
             }
-            */
+
         }
     }
 }

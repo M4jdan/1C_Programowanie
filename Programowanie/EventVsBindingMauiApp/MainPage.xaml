@@ -39,6 +39,7 @@
         <Entry Text="{Binding Message, Source={x:Reference thisPage}}" />
         <Button Clicked="Button_Clicked_1" Text="Wykonaj" />
         <Label Text="{Binding ReturnMessage, Source={x:Reference thisPage}}" />
+        
 
 
     </StackLayout>
