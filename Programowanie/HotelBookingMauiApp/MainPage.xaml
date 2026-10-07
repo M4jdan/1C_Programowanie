@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="HotelBookingMauiApp.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="thisPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20"
+                             Spacing="15"
+                             BindingContext="{x:Reference thisPage}">
+
+            <Label Text="Rezerwacja pokoju hotelowego"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Imię i nazwisko" />
+
+            <Entry Placeholder="Podaj imię i nazwisko"
+                   Text="{Binding FullName}" />
+
+            <Label Text="Adres e-mail" />
+
+            <Entry Placeholder="Podaj adres e-mail"
+                   Keyboard="Email"
+                   Text="{Binding Email}" />
+
+            <Label Text="Data przyjazdu" />
+
+            <DatePicker Date="{Binding ArrivalDate}"
+                        MinimumDate="{Binding MinimumDate}" />
+
+            <Label Text="Liczba nocy" />
+
+            <HorizontalStackLayout Spacing="10">
+
+                <Stepper Minimum="1"
+                         Maximum="14"
+                         Value="{Binding NumberOfNights}" />
+
+                <Label Text="{Binding NumberOfNights}"
+                       VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+            <Label Text="Liczba osób" />
+
+            <HorizontalStackLayout Spacing="10">
+
+                <Stepper Minimum="1"
+                         Maximum="4"
+                         Value="{Binding NumberOfPeople}" />
+
+                <Label Text="{Binding NumberOfPeople}"
+                       VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+            <Label Text="Rodzaj pokoju" />
+
+            <Picker Title="Wybierz pokój"
+                    ItemsSource="{Binding RoomTypes}"
+                    SelectedItem="{Binding SelectedRoom}" />
+
+            <Label Text="Śniadanie" />
+
+            <Switch IsToggled="{Binding Breakfast}" />
+
+            <Label Text="Miejsce parkingowe" />
+
+            <CheckBox IsChecked="{Binding Parking}" />
+
+            <Label Text="Rabat" />
+
+            <Slider Minimum="0"
+                    Maximum="20"
+                    Value="{Binding Discount}" />
+
+            <Label Text="{Binding Discount, StringFormat='Rabat: {0:F0}%'}"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Oblicz koszt"
+                    Command="{Binding CalculateCommand}" />
+
+            <Label Text="{Binding Message}"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
