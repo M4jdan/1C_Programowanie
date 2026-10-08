@@ -2,23 +2,108 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public string ProductName { get; set; }
+
+        public string Price { get; set; }
+
+        private double numberOfItems = 1;
+        public double NumberOfItems
+        {
+            get { return numberOfItems; }
+            set
+            {
+                numberOfItems = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<string> DeliveryTypes { get; set; } = new List<string>
+        {
+            "Odbiór osobisty",
+            "Kurier",
+            "Paczkomat"
+        };
+
+        public string SelectedDelivery { get; set; }
+
+        public Command CalculateCommand { get; set; }
+
+        private string message;
+
+        public string Message
+        {
+            get { return message; }
+            set
+            {
+                message = value;
+                OnPropertyChanged();
+            }
+        }
 
         public MainPage()
         {
+            CalculateCommand = new Command(CalculateCost);
+
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private void CalculateCost()
         {
-            count++;
+            if (string.IsNullOrWhiteSpace(ProductName))
+            {
+                Message = "Podaj nazwę produktu.";
+                return;
+            }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            if (string.IsNullOrWhiteSpace(Price))
+            {
+                Message = "Podaj cenę za sztukę.";
+                return;
+            }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (!double.TryParse(Price, out double price))
+            {
+                Message = "Cena musi być liczbą.";
+                return;
+            }
+
+            if (price < 0)
+            {
+                Message = "Cena nie może być ujemna.";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(SelectedDelivery))
+            {
+                Message = "Wybierz sposób dostawy.";
+                return;
+            }
+
+            double deliveryCost = 0;
+
+            if (SelectedDelivery == "Odbiór osobisty")
+            {
+                deliveryCost = 0;
+            }
+            else if (SelectedDelivery == "Kurier")
+            {
+                deliveryCost = 12;
+            }
+            else if (SelectedDelivery == "Paczkomat")
+            {
+                deliveryCost = 10;
+            }
+
+            double orderCost = price * NumberOfItems;
+
+            double totalCost = orderCost + deliveryCost;
+
+            Message = $"Produkt: {ProductName}\n" +
+                      $"Cena za sztukę: {price:F2} zł\n" +
+                      $"Liczba sztuk: {NumberOfItems}\n" +
+                      $"Sposób dostawy: {SelectedDelivery}\n" +
+                      $"Koszt dostawy: {deliveryCost:F2} zł\n" +
+                      $"Łączny koszt: {totalCost:F2} zł";
         }
     }
 }
