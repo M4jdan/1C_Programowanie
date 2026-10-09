@@ -90,7 +90,7 @@
                 deliveryCost = 12;
             }
             else if (SelectedDelivery == "Paczkomat")
-            {
+        {
                 deliveryCost = 10;
             }
 
