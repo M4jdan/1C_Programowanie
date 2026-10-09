@@ -8,8 +8,6 @@
         {
             InitializeComponent();
         }
-
-        //sdfghsdjhgdhsghjkdfs
       
     }
 }
