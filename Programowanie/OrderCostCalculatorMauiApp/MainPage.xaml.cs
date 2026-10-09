@@ -6,6 +6,10 @@
 
         public string Price { get; set; }
 
+        public int ProductId { get; set; }
+
+        public int cos {  get; set; }
+
         private double numberOfItems = 1;
         public double NumberOfItems
         {
